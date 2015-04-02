@@ -15,12 +15,7 @@
 
 
             <div class="page-content">
-                <div class="page-subheading page-subheading-md">
-    <ol class="breadcrumb">
-        <li><a href="/">首页</a></li>
-        <li class="active"><a>注册新用户</a></li>
-    </ol>
-</div>
+
 
 
 <div class="container-fluid-md">

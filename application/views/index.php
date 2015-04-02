@@ -469,9 +469,7 @@
         <li class="active menu-second">公司信息</li>
     </ol>
 </div>
-<div class="page-heading page-heading-md">
-    <h2 class="menu-second">公司信息</h2>
-</div>
+
 
 
 <div class="container-fluid-md" id="body" style="margin-bottom:5%">
@@ -531,20 +529,23 @@
             function nav_get(name){
                 var menu_second='';
                 switch(name){
-                    case 'gsxx':
-                        menu_second = '公司信息';
+                    case '':
+                        menu_second = '网站概览';
                         break;
-                    case 'zxfb':
-                        menu_second = '最新发布';
+                    case 'my_team':
+                        menu_second = '我的成员';
                         break;
-                    case 'wdzy':
-                        menu_second = '我的主页';
+                    case 'add_team':
+                        menu_second = '添加成员';
                         break;
-                    case 'wdtd':
-                        menu_second = '我的团队';
+                    case 'my_subscribe':
+                        menu_second = '我的订阅';
                         break;
-                    case 'wdxx':
-                        menu_second = '我的信息';
+                    case 'webwatch_context/163':
+                        menu_second = '163';
+                        break;
+                    case 'webwatch_context/sina':
+                        menu_second = 'sina';
                         break;
                     case 'gsxx':
                         menu_second = '公司信息';

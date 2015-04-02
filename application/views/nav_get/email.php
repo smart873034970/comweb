@@ -124,7 +124,6 @@
                         </tbody>
                         <script>
                         $('.itemselect').click(function(){
-                            alert('123');
                         })
                         </script>
                     </table>

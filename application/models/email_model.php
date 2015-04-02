@@ -52,13 +52,13 @@
             $now_date = date('y-m-d G:i:sa');
             if(isset($result->row(0)->email)){
                 if($result->row(0)->reg_state == 0){
-                    $this->db->update('email_list', array('username' => 'default user', 'create_time' => date('y-m-d G:i:sa'),'email' => $_email, 'keyword' => $_keyword, 'publickey' => $_publickey));
+                    $this->db->update('email_list', array('username' => 'default user', 'create_time' => date('y-m-d G:i:s'),'email' => $_email, 'keyword' => $_keyword, 'publickey' => $_publickey));
                     return 0;
                 }else{
                     return 1;   //用于已注册，禁止重新验证
                 }
             }else{
-                $this->db->insert('email_list', array('username' => 'default user', 'create_time' => date('y-m-d G:i:sa'),'email' => $_email, 'keyword' => $_keyword, 'publickey' => $_publickey));
+                $this->db->insert('email_list', array('username' => 'default user', 'create_time' => date('y-m-d G:i:s'),'email' => $_email, 'keyword' => $_keyword, 'publickey' => $_publickey));
                 return 0;
             }
 

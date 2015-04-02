@@ -103,6 +103,7 @@ to {margin-left:30%;}
                                 printf('<a type="button" href="libs/c_user/login_out" class="btn btn-warning btn-block btn-lg">注销 / 更换帐号</a>');
                                 printf('<a type="button" href="welcome" class="btn btn-primary btn-block btn-lg">登入</a>');
                             }else{
+                                printf('<a type="button" href="register" class="btn btn-info btn-block btn-lg">注册新用户</a>');
                                 printf('<button type="button" onclick="mycheck()" id="btn-submit" class="btn btn-primary btn-block btn-lg">登入</button>');
                             }
                         ?>

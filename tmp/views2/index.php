@@ -260,8 +260,8 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a onclick="nav_get('add_team')" title="Profile">
-                                        <i class="fa fa-fw fa-caret-right"></i> 添加成员
+                                    <a onclick="nav_get('control_team')" title="Profile">
+                                        <i class="fa fa-fw fa-caret-right"></i> 成员管理
                                     </a>
                                 </li>
                               <!--   <li>

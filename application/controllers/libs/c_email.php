@@ -1,7 +1,5 @@
-
+<!-- mail控制器，用于用户邮件操作 -->
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-// <!-- 默认登录控制器，默认首页 -->
-// <!-- kk 2015/03/20 -->
 class c_email extends CI_Controller {
     private $email_to;
     private $email_subject;
@@ -24,10 +22,10 @@ class c_email extends CI_Controller {
         // config the email
         $config['protocol'] = 'smtp'; 
         $config['smtp_host'] = 'smtp.163.com'; // given server 
-        $config['smtp_user'] = 'myyantest'; 
-        $config['smtp_pass'] = 'Zz612401'; 
+        $config['smtp_user'] = 'you_smart'; 
+        $config['smtp_pass'] = 'Zz612401000000'; 
         $config['smtp_port'] = '25'; // given port. 
-        $config['smtp_timeout'] = '5'; 
+        $config['smtp_timeout'] = '10'; 
         $config['newline'] = "/r/n"; 
         $config['crlf'] = "/r/n"; 
         $config['charset']='utf-8';  // Encoding type 

@@ -1,5 +1,4 @@
-<!-- 主页控制器，个人首页 -->
-<!-- kk 2015/03/20 -->
+<!-- 主界面控制器，个人首页 -->
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Welcome extends CI_Controller {

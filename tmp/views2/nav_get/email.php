@@ -6,7 +6,7 @@
                 <h5 class="alert alert-success"><?php echo date('m-d G:i:s')?></h5>
                 <ul class="nav nav-pills nav-stacked nav-mail">
                     <li class="active"><a href="#"><i class="fa fa-fw fa-inbox "></i> 邮件操作 <span class="label label-warning pull-right">31</span></a></li>
-                    <li><a onclick="nav_get('send_email')" style="cursor: pointer"><i class="fa fa-fw fa-envelope-o"></i> 发送一封邮件</a></li>
+                    <li><a href="#"><i class="fa fa-fw fa-envelope-o"></i> 发送一封邮件</a></li>
                     <li><a href="#"><i class="fa fa-fw fa-star"></i> 更改订阅状态</a></li>
                     <li><a href="#"><i class="fa fa-fw fa-file-text-o"></i> 更改用户信息</a></li>
                     <li><a href="#"><i class="fa fa-fw fa-trash-o"></i> 删除用户</a></li>
@@ -23,9 +23,9 @@
             </div>
         </div>
         <div class="col-md-9 col-lg-10">
-            <div class="panel panel-lg panel-light" style="border:1px solid #F60;padding:4% 2% 10% 2%">
+            <div class="panel panel-lg panel-light">
                 <div class="panel-heading padding-md-vertical">
-                    <h3 class="thin no-margin-top margin-md-bottom; " >
+                    <h3 class="thin no-margin-top margin-md-bottom">
                         已订阅列表 <span class="smaller text-muted">(<?php echo sizeof($email_all); ?>)</span>
                     </h3>
 

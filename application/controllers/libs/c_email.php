@@ -1,5 +1,5 @@
-<!-- mail控制器，用于用户邮件操作 -->
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+// <!-- mail控制器，用于用户邮件操作 -->
 class c_email extends CI_Controller {
     private $email_to;
     private $email_subject;
@@ -52,7 +52,7 @@ class c_email extends CI_Controller {
             echo 'error: email_message is cann`t empty';
             exit;
         }else{
-            $this->email_message = '<h1>'.$_REQUEST['email_message'].'</h1>';
+            $this->email_message = '<h3>此条邮件由亚安系统发送.</h3></br><div>'.$_REQUEST['email_message'].'</div>';
         } 
         if(empty($_REQUEST['email_to'])){
             echo 'error: email_to is cann`t empty';

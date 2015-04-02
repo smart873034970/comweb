@@ -1,7 +1,6 @@
-<!-- 信息列表 MySqlmodel -->
-<!-- 2015/03/23 -->
-
 <?php
+// <!-- 信息列表 MySqlmodel -->
+// <!-- 2015/03/23 -->
     class Email_model extends CI_Model{
         public function __construct(){
             parent::__construct();

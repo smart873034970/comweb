@@ -283,13 +283,13 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a onclick="nav_get('had_email')"title="Inbox">
-                                        <i class="fa fa-fw fa-caret-right"></i> 已发送邮件
+                                    <a onclick="nav_get('send_email')">
+                                        <i class="fa fa-fw fa-caret-right"></i> 发送一封邮件
                                     </a>
                                 </li>
                                 <li>
-                                    <a title="Message">
-                                        <i class="fa fa-fw fa-caret-right"></i> 我的收信
+                                    <a onclick="nav_get('had_email')"title="Inbox">
+                                        <i class="fa fa-fw fa-caret-right"></i> 已发送邮件
                                     </a>
                                 </li>
                             </ul>

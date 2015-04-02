@@ -1,4 +1,4 @@
-
+提交
     <div class="panel panel-default" style="">
         <div class="panel-heading">
             <h3 class="panel-title"><span class="glyphicon glyphicon-envelope"></span>有想法？Tell Us</h3>
@@ -17,13 +17,13 @@
     	<div class="col-sm-4">
             <div class="form-group">
             	<label class="sr-only" for="exampleInputName5">Name</label>
-            	 <input type="text" class="form-control" id="exampleInputName5" placeholder="*您的姓名">
+            	 <input type="text" class="form-control" id="exampleInputName5" placeholder="您的姓名">
              </div>
         </div>
     	<div class="col-sm-4">
         	<div class="form-group">
             	<label class="sr-only" for="exampleInputEmail5">Email address</label>
-            	<input type="email" class="form-control" id="exampleInputEmail5" placeholder="*您的电子邮箱">
+            	<input type="email" class="form-control" id="exampleInputEmail5" placeholder="您的电子邮箱">
         	</div>
     	</div>
     	<div class="col-sm-4">
@@ -40,8 +40,8 @@
     </div>
     <div class="form-group">
     	<div class="input-group">
-            <input type="email" class="form-control" id="disabledTextInput" readonly aria-describedby="bsic-addon2" value="example">
-           	<span class="input-group-addon" id="basic-addon2">@yaninfo.com</span>
+            <input type="email" class="form-control" id="input_email" aria-describedby="bsic-addon2" value="example@yaninfo.com">
+           	<span class="input-group-addon" id="basic-addon2">@*email address</span>
         </div>
         <!-- <label class="sr-only" for="exampleInputEmail5">Email to</label> -->
       	<!-- <input type="email" class="form-control disabled" id="exampleInputEmail5" value="example@yaninfo.com"> -->
@@ -51,14 +51,14 @@
     </div>
     <div class="form-group">
         <label class="sr-only" for="exampleInputEmail5">Email title</label>
-      	<input type="email" class="form-control" id="exampleInputEmail5" placeholder="邮件标题">
+      	<input type="email" class="form-control" id="input_subject" placeholder="邮件标题">
     </div>
     <div class="form-group">
     	<h5><b>内容：</b></h5>
     </div>
     <div class="form-group">
         <label class="sr-only" for="exampleInputMessage5">Message</label>
-        <textarea rows="20" class="form-control" id="exampleInputMessage5" placeholder="输入邮件正文" style="resize:vertical"></textarea>
+        <textarea rows="20" class="form-control" id="input_message" placeholder="输入邮件正文" style="resize:vertical"></textarea>
     </div>
 </div>
        	<!--  -->
@@ -71,17 +71,23 @@
     </div>
 <script>
 function js_send_email(){
-    result = $.ajax({
-        url: "libs/c_email/send" ,
-        beforeSend: function() {
-            $('#send_email_submit').html('邮件正在加载');
-        },
-        error: function() {
-            $('$send_email_submit').html('获取数据出错');
-        },
-        success: function() {
-            $('#send_email_submit').html(result.responseText);
-        }
-    });
+            $.ajax({
+                url: 'libs/c_email/send',
+                data:'email_to='+ $('#input_email').val()+'&email_subject='+$('#input_subject').val()+'&email_message='+$('#input_message').val(),
+                type: "get",
+                beforeSend:function(){
+                    $('#send_email_submit').html('正在提交..')
+                },
+                success:function(result){
+                    if(result == 0){
+                        // nav_get('send_email');
+                        $('#send_email_submit').html('提交')
+                        alert('发送成功')
+                    }else{
+                        $('#send_email_submit').html('提交')
+                        alert('发送失败');
+                    }
+                }
+            })
 }
 </script>
